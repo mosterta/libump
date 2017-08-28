@@ -259,6 +259,7 @@ UMP_API_EXPORT void ump_reference_release(ump_handle mem);
 
 /**
  * Retrieves the physical address of the specified UMP memory.
+ * Retrieves the bus address of the specified UMP memory.
  *
  * @note There is a kernel space equivalent function called @ref ump_dd_physical_address_get "ump_dd_phys_address_get"
  *
@@ -269,6 +270,10 @@ UMP_API_EXPORT void ump_reference_release(ump_handle mem);
  * @return Returns the pointer to the physical daddress of the specified UMP memory.
  */
 UMP_API_EXPORT void* ump_phys_address_get(ump_handle mem);
+/*
+ * @return Returns the pointer to the bus address of the specified UMP memory.
+ */
+UMP_API_EXPORT void* ump_bus_address_get(ump_handle mem);
 
 #ifdef __cplusplus
 }
